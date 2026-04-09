@@ -1,0 +1,102 @@
+.home-page {}
+
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-badge {
+  display: inline-block; padding: 6px 18px;
+  background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.2);
+  border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+  color: var(--primary); letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800;
+  line-height: 1.25; margin-bottom: 12px;
+}
+.section-subtitle { color: var(--text-secondary); font-size: 1rem; max-width: 520px; margin: 0 auto; }
+
+/* How It Works */
+.hiw-section { background: linear-gradient(180deg, transparent, rgba(255,107,0,0.03), transparent); }
+.hiw-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; position: relative;
+}
+.hiw-card {
+  text-align: center; padding: 32px 20px; position: relative;
+  border-right: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.hiw-card:last-child { border-right: none; }
+.hiw-card:hover { background: rgba(255,107,0,0.03); }
+.hiw-step {
+  font-size: 2.5rem; font-weight: 900;
+  background: linear-gradient(135deg, rgba(255,107,0,0.15), transparent);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1; margin-bottom: 12px;
+}
+.hiw-icon { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+.hiw-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.hiw-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+.hiw-arrow {
+  position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+  font-size: 1.2rem; color: var(--primary); z-index: 1;
+}
+.hiw-cta { text-align: center; margin-top: 48px; }
+
+/* Features */
+.features-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.feature-card { text-align: center; }
+.feature-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.feature-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+/* Testimonials */
+.testimonials-section { background: rgba(0,0,0,0.15); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testimonial-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px;
+  transition: var(--transition); position: relative;
+}
+.testimonial-card:hover { border-color: var(--primary); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+.t-quote {
+  font-size: 4rem; line-height: 0.8; color: var(--primary);
+  opacity: 0.3; font-family: Georgia, serif; margin-bottom: 12px;
+}
+.t-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+.t-footer { display: flex; align-items: center; gap: 12px; }
+.t-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; color: white; flex-shrink: 0;
+}
+.t-name { font-weight: 700; font-size: 0.88rem; }
+.t-info { font-size: 0.73rem; color: var(--text-muted); }
+
+/* CTA */
+.cta-banner {
+  text-align: center; padding: 80px 40px;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1), rgba(0,201,167,0.05));
+  border: 1px solid rgba(255,107,0,0.2);
+  border-radius: var(--radius-lg); position: relative; overflow: hidden;
+}
+.cta-orb {
+  position: absolute; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,107,0,0.15), transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+}
+.cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 12px; position: relative; }
+.cta-banner p { color: var(--text-secondary); margin-bottom: 32px; position: relative; }
+.cta-btn { font-size: 1.1rem; padding: 18px 40px; position: relative; }
+
+@media (max-width: 1024px) {
+  .hiw-grid { grid-template-columns: repeat(2, 1fr); }
+  .hiw-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .hiw-arrow { display: none; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hiw-grid, .features-grid, .testimonials-grid { grid-template-columns: 1fr; }
+}

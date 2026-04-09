@@ -1,0 +1,52 @@
+.results-section { margin-top: 48px; }
+
+.results-banner {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(255,107,0,0.08), rgba(0,201,167,0.05));
+  border: 1px solid rgba(255,107,0,0.2);
+  border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 32px;
+}
+.banner-left { flex: 1; }
+.results-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+.results-sub { color: var(--text-secondary); font-size: 0.9rem; }
+.banner-stats { display: flex; gap: 24px; }
+.b-stat { display: flex; flex-direction: column; align-items: center; }
+.b-num { font-size: 1.8rem; font-weight: 800; color: var(--c); }
+.b-lbl { font-size: 0.68rem; color: var(--text-muted); text-align: center; }
+.reset-btn { white-space: nowrap; }
+
+/* Stream suggestions */
+.stream-suggestions {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px; margin-bottom: 32px;
+}
+.suggestions-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+.suggestions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.suggestion-card {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 14px; background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  transition: var(--transition);
+}
+.suggestion-card:hover { border-color: var(--primary); background: rgba(255,107,0,0.04); transform: translateY(-2px); }
+.suggestion-icon { font-size: 1.4rem; flex-shrink: 0; }
+.suggestion-stream { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.suggestion-reason { font-size: 0.72rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Grid */
+.colleges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; }
+
+/* No results */
+.no-results {
+  text-align: center; padding: 80px 24px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.no-results-icon { font-size: 3rem; margin-bottom: 16px; }
+.no-results h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.no-results p { color: var(--text-muted); margin-bottom: 24px; }
+
+@media (max-width: 768px) {
+  .results-banner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .colleges-grid { grid-template-columns: 1fr; }
+}

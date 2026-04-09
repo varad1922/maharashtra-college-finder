@@ -1,0 +1,26 @@
+.find-page { min-height: 100vh; }
+
+.find-hero {
+  position: relative; overflow: hidden;
+  padding: 120px 0 60px;
+  background: linear-gradient(180deg, rgba(255,107,0,0.05) 0%, transparent 100%);
+}
+.find-hero-bg { position: absolute; inset: 0; }
+.find-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.1; }
+.find-orb-1 { width: 400px; height: 400px; background: var(--primary); top: -100px; right: -100px; }
+.find-orb-2 { width: 300px; height: 300px; background: var(--accent); bottom: -50px; left: -50px; }
+.find-hero-inner { position: relative; z-index: 1; text-align: center; }
+.find-breadcrumb { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 16px; }
+.find-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 14px; }
+.find-subtitle { color: var(--text-secondary); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+
+.find-content { padding: 48px 24px 80px; }
+
+.form-container { max-width: 700px; margin: 0 auto; }
+
+.page-error {
+  margin-top: 16px; padding: 14px 20px;
+  background: rgba(252,129,129,0.1); border: 1px solid rgba(252,129,129,0.2);
+  border-radius: var(--radius); color: #FC8181; font-size: 0.88rem;
+  display: flex; gap: 8px; align-items: flex-start;
+}

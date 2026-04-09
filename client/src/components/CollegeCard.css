@@ -1,0 +1,139 @@
+.college-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: var(--transition);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+.college-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.college-card:hover {
+  border-color: rgba(255,107,0,0.3);
+  background: var(--bg-card-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(255,107,0,0.08);
+}
+.college-card:hover::before { opacity: 1; }
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.card-rank {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 700; color: white;
+  flex-shrink: 0;
+}
+.card-type-badge {
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.card-chance { margin-left: auto; }
+
+/* Body */
+.card-body {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.college-avatar {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, rgba(255,107,0,0.2), rgba(255,107,0,0.05));
+  border: 1px solid rgba(255,107,0,0.2);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 800; color: var(--primary);
+  flex-shrink: 0;
+}
+.college-info { flex: 1; min-width: 0; }
+.college-name {
+  font-size: 1rem; font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 2px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.college-short {
+  font-size: 0.75rem; color: var(--primary);
+  font-weight: 600; display: block; margin-bottom: 6px;
+}
+.college-meta {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 6px;
+}
+.meta-item { font-size: 0.75rem; color: var(--text-muted); }
+.college-affiliation { font-size: 0.72rem; color: var(--text-muted); }
+
+/* Description */
+.college-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Chance meter */
+.chance-meter { margin-bottom: 16px; }
+.chance-meter-label {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px; font-size: 0.78rem; color: var(--text-secondary);
+}
+.chance-bar-bg {
+  height: 6px; background: rgba(255,255,255,0.06);
+  border-radius: 3px; overflow: hidden;
+}
+.chance-bar-fill {
+  height: 100%; border-radius: 3px;
+  transition: width 1s cubic-bezier(0.4,0,0.2,1);
+}
+.chance-fill-excellent      { background: linear-gradient(90deg, #00C9A7, #00EDCA); }
+.chance-fill-good           { background: linear-gradient(90deg, #48C78E, #6FCF97); }
+.chance-fill-try-your-luck  { background: linear-gradient(90deg, #FFB900, #FFCF40); }
+.chance-fill-difficult      { background: linear-gradient(90deg, #FC8181, #F56565); }
+.cutoff-info { font-size: 0.72rem; color: var(--text-muted); margin-top: 6px; }
+
+/* Streams */
+.card-streams { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.streams-label { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+.streams-list { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Footer */
+.card-footer {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.fee-info { display: flex; flex-direction: column; flex: 1; }
+.fee-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.fee-value { font-size: 1rem; font-weight: 700; color: var(--accent); }
+.fee-na { font-size: 0.78rem; color: var(--text-muted); }
+.card-rating { display: flex; align-items: center; gap: 4px; font-size: 0.75rem; }
+.rating-num { color: var(--text-secondary); font-weight: 600; }
+.card-link { font-size: 0.8rem; padding: 8px 16px !important; }

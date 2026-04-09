@@ -1,0 +1,25 @@
+{
+  "name": "maharashtra-college-finder",
+  "version": "1.0.0",
+  "description": "Maharashtra Student College Finder - Full Stack MERN App",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/seed/seedData.js",
+    "install-all": "npm install && npm install --prefix client"
+  },
+  "keywords": [
+    "maharashtra",
+    "college",
+    "finder",
+    "mern"
+  ],
+  "author": "Maharashtra College Finder",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
