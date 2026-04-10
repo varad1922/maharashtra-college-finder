@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const collegeSchema = new mongoose.Schema({
   name: { type: String, required: true },
   shortName: { type: String },
+  aisheCode: { type: String, unique: true, sparse: true },
+  state: { type: String, default: 'Maharashtra' },
   city: { type: String, required: true },
   district: { type: String, required: true },
   address: { type: String },
