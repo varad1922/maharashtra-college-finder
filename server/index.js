@@ -4,6 +4,8 @@ const cors = require('cors');
 require('dotenv').config({ path: require('path').join(__dirname, '.env') });
 
 const collegeRoutes = require('./routes/colleges');
+const adminRoutes = require('./routes/admin');
+const generalRoutes = require('./routes/general');
 
 const app = express();
 
@@ -11,6 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/colleges', collegeRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/general', generalRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Maharashtra College Finder API is running!' });
